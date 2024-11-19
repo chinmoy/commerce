@@ -33,6 +33,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDto getProduct(long id) {
+        //Product p = productRepository.findById(id).get();
         return modelMapper.map(productRepository.findById(id).get(),ProductDto.class);
     }
 
